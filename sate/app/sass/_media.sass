@@ -6,41 +6,57 @@
 // ≥1200px
 @include media-breakpoint-down(lg) 
 	
+	.top-nav
+		&_menu
+			li
+				margin-right: auto
+
 
 
 // ≥992px
 +media-breakpoint-down(md)
-		html
-			font-size: 7px
-		.top-nav
-			&_btn
-				display: block
-			&_menu
-				flex-direction: column
-				display: none
-				li
-					line-height: 2
-					a
-
-						&::after
-							display: none
-			&_active
+	html
+		font-size: 7px
+	.top-nav
+		&_btn
+			display: block
+		&_menu	
+			flex-direction: row			
+			display: none
+			&.active
 				display: flex
+				margin-bottom: 0
+			li
+				line-height: 2
+				justify-content: space-around
+				a
+					&::after
+						display: none
+	
+	.left-sidebar
+		&_btn
+			display: block
+		&_menu
+			flex-direction: column
+			display: none
+			&.active
+				display: flex
+				margin-bottom: 0
 			
 			
 // ≥768px
 +media-breakpoint-down(sm)
 	html
-			font-size: 7px
+		font-size: 7px
 	.top-nav
 		&_btn
 			display: block
 		&_menu
 			flex-direction: column
 			display: none
-		&_active
-			display: flex
-			margin-bottom: 0
+			&.active
+				display: flex
+				margin-bottom: 0
 			li
 				line-height: 2
 				a
@@ -51,15 +67,25 @@
 		&_btn
 			display: block
 		&_menu
+			flex-direction: column
 			display: none
+			&.active
+				display: flex
+				margin-bottom: 0
+
+
 	.copy
-	text-align: center
-	small
-		display: block
-		margin: 26px auto
+
+		text-align: center
+		small
+			display: block
+			margin: 26px auto
+
 	.footer
 		&-contacts
 			text-align: left
+		.fa 
+			
 
 
 // ≥576px
