@@ -29,9 +29,12 @@ a
 	color: $active-color
 h2
 	font-size: 24px
+img 
+	max-width: 100% 
+
 .btn
 	padding: 20px 30px
-	display: inline block
+	display: inline-block
 	color: $white
 	border-radius: 5px
 	text-decoration: none
@@ -41,6 +44,7 @@ h2
 		background-color: $active-color
 		border-bottom: 5px solid darken($active-color, 10%)
 		&:hover
+			text-decoration: none
 			border-bottom: 5px solid darken($active-color, 5%)
 
 .text-center
@@ -48,7 +52,7 @@ h2
 
 .top-nav
 	background-color: $white
-	padding: 15px
+	padding: 15px 34px
 	position: relative
 	&_btn
 		display: none
@@ -58,8 +62,8 @@ h2
 		border: none
 		font-size: 18px
 		position: absolute
-		top: -55px
-		right: 20px
+		top: -40px
+		right: 30px
 		&:hover
 			cursor: pointer
 	&_menu
@@ -68,6 +72,8 @@ h2
 		display: flex
 		li
 			margin-right: 42px
+			&:last-child
+				margin-right: 0
 			a
 				text-transform: uppercase
 				text-decoration: none
@@ -79,19 +85,19 @@ h2
 					width: 100%
 					height: 2px
 					background-color: $active-color
-					transform: translateY(38px) scale(0)
+					transform: translateY(25px) scale(0)
 					transition: all 0.2s
 				&:hover
 					text-decoration 
 					&::after
-						transform: translateY(63px) scale(1)
+						transform: translateY(25px) scale(1)
 .slick-active
 	outline: none
 
 .left-sidebar
 	margin-top: 4rem
 	&_object
-		display: none
+		
 	&_btn
 		display: none
 		background-color: $white
@@ -147,8 +153,8 @@ h2
 
 .content
 	margin-top: 40px
-	p 
-		margin-bottom: 3rem
+	margin-bottom: 76px
+	
 
 
 .directions
@@ -216,6 +222,165 @@ h2
 				&:hover
 					background-color: rgba($white, 0.9)
 					color: $dark
+// Custom .team about.html о компонии
+.team 
+	text-align: center
+	h4
+		font-size: 18px
+		font-weight: 400
+		margin-bottom: 15px
+		margin-top: 1.5rem
+	p
+		margin-bottom: 40px
+// Custom .contacts contacts.html контакты
+.contacts
+	font-size: 16px
+	&-address
+		display: block
+		line-height: 2
+	&-btn
+		margin-top: 36px
+		
+	.fa 
+		margin-right: 12px
+		color: $active-color
+		vertical-align: middle
+	&-social-links
+		ul
+			margin-top: 36px
+			list-style: none
+			padding: 0
+			li
+				display: inline-block
+				a
+					margin-right: 15px
+					display: inline-block
+					background-color: $active-color
+					color: $white
+					width: 42px
+					height: 42px
+					text-align: center
+					line-height: 45px
+					border-radius: 50%
+					&:hover
+						opacity: 0.5
+// Custom .org orgaization.html Структура
+.org
+	&-card
+		min-height: 42rem
+		background-color: $white
+		padding: 25px 35px
+		margin-bottom: 30px
+		transition: box-shadow 0.5s ease 
+		&:hover
+			box-shadow: 0 5px 10px rgba(0, 0, 1, 0.1)
+		a
+			text-transform: uppercase
+			text-decoration: none
+			display: block
+			margin-bottom: 20px
+		small
+			display: block
+			line-height: 2
+			color: $inn
+		p
+// Custom . investor.html Инвесторам
+// оформление калькулятора
+.calc
+	&-radio
+		flex-basis: 50%
+		&:last-child
+			flex-basis: 100%		
+			display: flex
+	&-legal
+		font-size: 12px
+	&-programms
+		display: flex
+		flex-wrap: wrap	
+		label
+			display: inline-block
+			margin-bottom: 20px 
+			small
+				display: block
+				margin-left: 28px
+				opacity: 0.5
+				font-size: 10px
+			&:hover
+				cursor: pointer
+			&::before
+				content: ''
+				display: inline-block
+				vertical-align: middle
+				width: 24px
+				height: 24px
+				box-shadow: 0 5px 10px rgba(0, 0, 1, 0.1)
+				background-color: $white
+				border: 5px solid $white
+				border-radius: 50%
+				transition: border 0.5s ease
+	input[type="radio"]
+		display: none
+		&:checked
+			&+label::before
+				background-color: $active-color
+				border: 5px solid $white
+	&-popular
+		padding-left: 5px
+		padding-right: 5px
+		margin-left: 16px
+		height: 25px
+		color: $white
+		font-size: 10px
+		display: flex
+		justify-content: center
+		align-items: center
+		background-color: $active-color	
+		text-transform: uppercase
+		position: relative
+		&::before
+			content: ''
+			width: 6px
+			height: 13px
+			
+			border: 6px solid transparent
+			border-right: 6px solid $active-color
+			position: absolute
+			left: -12px
+			top: 50%
+			margin-top: -6px
+	&-summ
+		&_invest
+			&-label
+				margin-right: 10px
+
+			&_num
+				display: inline-block
+				padding: 10px 48px
+				font-size: 18px
+				background-color: $white
+	&-total	
+		margin: 20px
+		background-color: $white
+		display: inline-block
+		text-align: center
+		padding: 10px 38px
+		margin-right: 20px
+		strong
+			font-size: 18px
+			color: $active-color
+			font-weight: 400
+		small
+			font-size: 10px
+	&-month
+		display: inline-block
+		text-align: center
+		font-size: 18px
+		small
+			font-size: 10px
+
+
+
+
 
 
 

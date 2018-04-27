@@ -18,11 +18,12 @@
 	html
 		font-size: 7px
 	.top-nav
+		
 		&_btn
-			display: block
-		&_menu	
-			flex-direction: row			
 			display: none
+		&_menu	
+			margin: 0
+
 			&.active
 				display: flex
 				margin-bottom: 0
@@ -30,10 +31,14 @@
 				line-height: 2
 				justify-content: space-around
 				a
+					font-size: 12px
+					font-weight: 700
 					&::after
 						display: none
 	
 	.left-sidebar
+		&_object
+			display: none
 		&_btn
 			display: block
 		&_menu
@@ -64,6 +69,8 @@
 						display: none
 
 	.left-sidebar
+		&_object
+			display: none
 		&_btn
 			display: block
 		&_menu

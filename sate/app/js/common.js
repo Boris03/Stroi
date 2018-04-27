@@ -8,12 +8,19 @@ $('.direction-blocks').slick({
 	slidesToScroll: 1,
 	responsive: [
     {
-      breakpoint: 768,
+      breakpoint: 767,
       settings: {
         slidesToShow: 1,
         slidesToShow: 1
       }
-    }
+    },
+    {
+     		breakpoint: 1200,
+      	settings: {
+        slidesToShow: 3,
+        slidesToShow: 1
+      }
+     }
   ]
 });
 
