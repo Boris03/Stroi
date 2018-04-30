@@ -287,6 +287,9 @@ img
 // Custom . investor.html Инвесторам
 // оформление калькулятора
 .calc
+	h4 
+		margin-top: 0
+		margin-bottom: 30px
 	&-radio
 		flex-basis: 50%
 		&:last-child
@@ -350,6 +353,7 @@ img
 			margin-top: -6px
 	&-summ
 		&_invest
+			margin-top: 30px
 			&-label
 				margin-right: 10px
 
@@ -358,12 +362,12 @@ img
 				padding: 10px 48px
 				font-size: 18px
 				background-color: $white
-	&-total	
+	&-total, &-month	
 		margin: 20px
 		background-color: $white
 		display: inline-block
 		text-align: center
-		padding: 10px 38px
+		padding: 10px 
 		margin-right: 20px
 		strong
 			font-size: 18px
@@ -372,11 +376,46 @@ img
 		small
 			font-size: 10px
 	&-month
+		background-color: transparent
 		display: inline-block
 		text-align: center
 		font-size: 18px
 		small
 			font-size: 10px
+// Custom .category.html  Категория
+.object
+	&-card
+		background-color: $white
+		margin-bottom: 30px
+		img
+			width: 100%
+		&_text
+			padding: 30px
+		&-title
+			display: block
+			font-size: 16px
+			text-decoration:none
+			color: $active-color
+		&_price
+			display: block
+			font-size: 20px
+			font-weight: 700
+			text-align: center
+			color: $active-color
+		&_btn
+			text-align: center
+			display: block
+		&_more
+			display: block
+			margin: 30px
+			color: $dark
+			text-align: center
+// Custom object-page.html Обект Участок
+.object-page
+	&_gellery
+		float: right
+
+
 
 
 
